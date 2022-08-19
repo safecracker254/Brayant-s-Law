@@ -1,0 +1,112 @@
+.{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  background-color: #32597f
+}
+.menu-container{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.menu-toggle{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 50px;
+    transition: transform 1.5s;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #232427;
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 50%),
+    -2px -2px 2px 1px rgb(108 108 108 / 20%),
+    inset 2px 2px 2px 2px rgb(0 0 0 / 50%),
+    inset -2px -2px 2px 1px rgb(108 108 108 / 20%);
+    background-color: #131415;    
+
+}
+.menu-container li a{
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    margin: -100px;
+    color: white;
+    border: 2px solid #232427;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1.0s;
+    font-size: 30px;
+    text-decoration: none !important;
+    box-shadow: 1px 1px 2px 2px rgb(0 0 0 / 50%),
+    -2px -2px 2px 1px rgb(108 108 108 / 20%),
+    inset 1px 1px 2px 2px rgb(0 0 0 / 50%),
+    inset -2px -2px 2px 1px rgb(108 108 108 / 20%);
+
+
+}
+.menu-container li{
+    list-style: none;
+    position: absolute;
+    transform-origin: 200px;
+    transition: 0.8s;
+    left: 0;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(170px);
+     
+}
+.menu-container.active .menu-toggle{
+    transform: rotate(315deg);
+}
+.menu-container.active li{
+    transform: rotate(calc(365deg / 8 * var(--i)));
+} 
+.menu-container.active li:nth-of-type(5) a i{
+    transform: rotate(178deg);
+
+}
+.menu-container.active li:nth-of-type(6) a i{
+    transform: rotate(130deg);
+
+}
+.menu-container.active li:nth-of-type(7) a i{
+    transform: rotate(85deg);
+
+}
+.menu-container.active li:nth-of-type(3 ) a i{
+    transform: rotate(-90deg);
+
+}
+/* particles */
+// SASS Variables.
+$text:#fff;
+$link:#e34234;
+$link-hover:#ba160c;
+$background:#00356B;
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+	background: $background
+}

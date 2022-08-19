@@ -1,0 +1,37 @@
+/* bouncy text effects */
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  .bouncy {
+    width: 400px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 4em;
+    animation-name: bounce;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes bounce {
+    0% {
+      opacity: 0;
+      transform: scale(0.1);
+      color: #bd935f;
+    }
+  
+    50% {
+      opacity: 0.5;
+      transform: scale(1.5);
+      color: #bd935f;
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1);
+      color: #bd935f;
+    }
+  }
+  
